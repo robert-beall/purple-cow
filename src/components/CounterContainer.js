@@ -3,8 +3,6 @@ import axios from 'axios';
 import PurpleCowButton from './PurpleCowButton.js';
 import PurpleCowProgressBar from './PurpleCowProgressBar';
 import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import Stack from 'react-bootstrap/Stack';
 import toast, { Toaster } from 'react-hot-toast';
 
@@ -39,15 +37,6 @@ export default class CounterContainer extends React.Component {
   }
 
   render() {
-    let update = null;
-
-    if(this.props.updateButton) {
-      update =
-        <div>
-          {this.props.prompt} <PurpleCowButton onClick={this.handleClick}>{this.props.buttonText}</PurpleCowButton>
-        </div>
-    }
-
     return (
       <Container className="mt-5 text-center">
         <Stack>
