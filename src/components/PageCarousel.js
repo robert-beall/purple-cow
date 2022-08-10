@@ -1,26 +1,27 @@
+import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 
 function PageCarousel() {
   return (
     <Carousel>
-      <Carousel.Item style={{'height':"450px"}}>
+      <Carousel.Item style={{'height':"500px"}}>
         <img
           className="d-block w-100"
           src="/assets/img/carousel.jpeg"
           alt="First slide"
-          style={{'height':"450px"}}
+          style={{'height':"500px"}}
         />
         <Carousel.Caption>
           <h3>Social Justice Initiatives</h3>
           <p>Making the world a better place requires courage and mobilization.</p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item style={{'height':"450px"}}>
+      <Carousel.Item style={{'height':"500px"}}>
         <img
           className="d-block w-100"
           src="/assets/img/carousel2.jpeg"
           alt="First slide"
-          style={{'height':"450px"}}
+          style={{'height':"500px"}}
         />
 
         <Carousel.Caption>
@@ -28,12 +29,12 @@ function PageCarousel() {
           <p>Ensuring a healthy, habitable Earth for future generations.</p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item style={{'height':"450px"}}>
+      <Carousel.Item style={{'height':"500px"}}>
         <img
           className="d-block w-100"
           src="/assets/img/carousel3.jpeg"
           alt="First slide"
-          style={{'height':"450px"}}
+          style={{'height':"500px"}}
         />
 
         <Carousel.Caption>
@@ -41,12 +42,12 @@ function PageCarousel() {
           <p>Maintaining and improving public health in difficult times.</p>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item style={{'height':"450px"}}>
+      <Carousel.Item style={{'height':"500px"}}>
         <img
           className="d-block w-100"
           src="/assets/img/carousel4.jpeg"
           alt="First slide"
-          style={{'height':"450px"}}
+          style={{'height':"500px"}}
         />
 
         <Carousel.Caption>
