@@ -1,12 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import Display from './components/counter/display.js';
-import Update from './components/counter/update.js';
+import Counter from './components/counter.js';
 
 function App() {
   return (
     <div>
-      <Display />
+      <Counter updateButton={true}><span>Hello World</span></Counter>
     </div>
   );
 }

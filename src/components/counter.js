@@ -1,22 +1,23 @@
 import React from 'react';
 import axios from 'axios';
+import EventButton from './eventbutton.js';
 
 export default class Display extends React.Component {
 
   state = {
    count: []
-  }
+ }
 
   componentDidMount() {
-    axios.get(`https://api.countapi.xyz/get/1ccb732e-b55a-4404-ad3f-0f99c02fe44e`)
+    axios.get(`${process.env.REACT_APP_COUNTER_ENDPOINT}/get/${process.env.REACT_APP_COUNTER_KEY}`)
       .then(res => {
         const count = res.data;
-        this.setState({ count });
+        this.setState({ count: count });
       });
   }
 
   handleClick = () => {
-    axios.get(`https://api.countapi.xyz/hit/1ccb732e-b55a-4404-ad3f-0f99c02fe44e`)
+    axios.get(`${process.env.REACT_APP_COUNTER_ENDPOINT}/hit/${process.env.REACT_APP_COUNTER_KEY}`)
       .then(res => {
         const count = res.data;
         this.setState({ count });
@@ -28,7 +29,7 @@ export default class Display extends React.Component {
     return (
       <div>
         <div>Current Count {this.state.count.value}</div>
-        <div><button onClick={this.handleClick} type="button">Update Counter</button></div>
+        <EventButton show={this.props.updateButton} eventHandler={this.handleClick} text="Update Counter"/>
       </div>
     );
   }
