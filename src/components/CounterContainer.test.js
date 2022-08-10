@@ -1,11 +1,11 @@
 import renderer from 'react-test-renderer';
-import Counter from './Counter.js';
+import CounterContainer from './CounterContainer.js';
 
 it('render counter without button', async () => {
   let testFunction = () => console.log("test");
 
   const component = renderer.create(
-    <Counter updateButton={false}
+    <CounterContainer updateButton={false}
              message="Purple Cows have joined the team!"/>,
   );
 
