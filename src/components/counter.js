@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import EventButton from './eventbutton.js';
+import EventButton from './EventButton.js';
 
 export default class Display extends React.Component {
 
