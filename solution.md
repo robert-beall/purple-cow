@@ -11,3 +11,8 @@ To stop the image:
 
 To start the image after stopping:
 > docker-compose start purple-cow
+## Configuring
+### Port
+To set the port that the application will run on, update the PORT environment variable in the .env file.
+
+*Note: This will set the port for the docker container as well. There is no need to update the docker-compose.yml or Dockerfile.*
