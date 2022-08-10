@@ -5,7 +5,10 @@ import Counter from './components/counter.js';
 function App() {
   return (
     <div>
-      <Counter updateButton={true}><span>Hello World</span></Counter>
+      <Counter updateButton={true}
+               message="Purple Cows have joined the team!"
+               prompt="You can add even more cows to the fray!"
+               buttonText="Add Cows"/>
     </div>
   );
 }

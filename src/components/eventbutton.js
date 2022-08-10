@@ -7,10 +7,6 @@ export default class EventButton extends React.Component {
   }
 
   render() {
-    if(!this.props.show) {
-      return null;
-    }
-
     return (
       <button onClick={this.props.eventHandler} type="button">{this.props.text}</button>
     );

@@ -26,10 +26,19 @@ export default class Display extends React.Component {
   }
 
   render() {
+    let update = null;
+
+    if(this.props.updateButton) {
+      update =
+        <div>
+          {this.props.prompt} <EventButton eventHandler={this.handleClick} text={this.props.buttonText}/>
+        </div>
+    }
+
     return (
       <div>
-        <div>Current Count {this.state.count.value}</div>
-        <EventButton show={this.props.updateButton} eventHandler={this.handleClick} text="Update Counter"/>
+        <p>{this.state.count.value} {this.props.message}</p>
+        {update}
       </div>
     );
   }
