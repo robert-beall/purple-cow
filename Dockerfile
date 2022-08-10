@@ -1,4 +1,5 @@
 FROM node:alpine
+ARG PORT
 
 WORKDIR /app
 
@@ -10,5 +11,7 @@ RUN npm i
 
 COPY . ./
 
-EXPOSE 3000
+RUN PORT=${PORT}
+
+EXPOSE ${PORT}
 CMD ["npm", "start"]
