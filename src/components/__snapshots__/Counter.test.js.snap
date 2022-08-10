@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`render counter without button 1`] = `
+<div>
+  <p>
+     
+    Purple Cows have joined the team!
+  </p>
+</div>
+`;

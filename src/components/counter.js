@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import EventButton from './EventButton.js';
 
 export default class Display extends React.Component {
 
@@ -13,6 +12,10 @@ export default class Display extends React.Component {
       .then(res => {
         const count = res.data;
         this.setState({ count: count });
+      })
+      .catch(error => {
+        console.log(error.toJSON());
+        this.setState({count: {value: 0}});
       });
   }
 
@@ -22,7 +25,10 @@ export default class Display extends React.Component {
         const count = res.data;
         this.setState({ count });
         console.log(this.state.count.value);
-      });
+      })
+      .catch(error => {
+        console.log(error.toJSON());
+      });;
   }
 
   render() {
@@ -31,7 +37,7 @@ export default class Display extends React.Component {
     if(this.props.updateButton) {
       update =
         <div>
-          {this.props.prompt} <EventButton eventHandler={this.handleClick} text={this.props.buttonText}/>
+          {this.props.prompt} <button onClick={this.handleClick}>{this.props.buttonText}</button>
         </div>
     }
 
